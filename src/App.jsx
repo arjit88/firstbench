@@ -13,7 +13,7 @@ import Performance from "./pages/pERFORMANCE.JSX";
 const App = () => {
   return (
     <Router>
-      <div className="h-screen flex flex-col bg-gray-300">
+      <div className="h-screen flex flex-col">
         {/* Navbar */}
         <Navbar className="w-full" />
 

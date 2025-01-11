@@ -42,7 +42,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between px-6 bg-gray-900 h-14 text-white font-semibold">
+    <div className="flex items-center justify-between py-8 px-20 bg-gray-800 h-14 text-white font-semibold">
       {/* Logo Section */}
       <div className="flex items-center space-x-2">
         <img src={"/logo.png"} alt="Logo" className="w-8 h-8 bg-transparent" />
@@ -125,7 +125,7 @@ const Navbar = () => {
           <BiSolidBell size={22} />
 
           {/* Notification Count */}
-          <div className="absolute -top-1.5 -right-1.5 text-xs text-white bg-red-500 w-5 h-5 rounded-full flex items-center justify-center">
+          <div className="absolute -top-1.5 -right-1.5 text-xs text-white bg-red-600 w-5 h-5 rounded-full flex items-center justify-center">
             3
           </div>
         </div>
@@ -134,10 +134,10 @@ const Navbar = () => {
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={toggleDropdown}
-            className="flex items-center space-x-2 bg-gray-800 px-3 py-1 rounded-md hover:bg-gray-700 focus:outline-none"
+            className="flex items-center space-x-2 bg-gray-950 px-3 py-1 rounded-md hover:bg-gray-900 focus:outline-none"
           >
             {/* Avatar */}
-            <div className="w-8 h-8 bg-orange-600 text-white flex items-center justify-center font-bold text-sm rounded-md">
+            <div className="w-8 h-8 bg-orange-500 text-white flex items-center justify-center font-bold text-sm rounded-md">
               P
             </div>
             {/* Selected Option */}
@@ -150,13 +150,13 @@ const Navbar = () => {
 
           {/* Dropdown Menu */}
           {isOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg z-10">
+            <div className="absolute right-0 mt-2 w-48 bg-gray-950 border border-gray-900 rounded-md shadow-lg z-10">
               <ul className="py-1">
                 {["Profile", "Settings", "Logout"].map((option) => (
                   <li key={option}>
                     <button
-                      className={`block px-4 py-2 text-gray-200 hover:bg-gray-700 w-full text-left ${
-                        selectedOption === option ? "bg-gray-700" : ""
+                      className={`block px-4 py-2 text-gray-200 hover:bg-gray-800 w-full text-left ${
+                        selectedOption === option ? "bg-gray-800" : ""
                       }`}
                       onClick={() => handleOptionClick(option)}
                     >
