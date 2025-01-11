@@ -242,9 +242,9 @@ const Hero = () => {
           </div>
 
           <div className="flex ml-2 mt-3">
-            <div className="flex items-center border-2 border-dotted border-violet-400 bg-violet-100 w-[96%] h-16 rounded-md">
+            <div className="flex items-center border-2 border-dotted border-violet-400 bg-violet-100 w-[98%] h-16 rounded-md">
               <p className="text-cyan-600 text-4xl font-semibold">
-                60{" "}
+                60
                 <span className="text-gray-500 text-2xl font-semibold">%</span>
                 <span className="text-gray-500 text-xl font-semibold">
                   Ans Took
