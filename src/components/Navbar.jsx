@@ -7,7 +7,7 @@ import { LuFileSpreadsheet } from "react-icons/lu";
 import { PiCastleTurretFill } from "react-icons/pi";
 import { TbHomeFilled } from "react-icons/tb";
 import { VscGraphLine } from "react-icons/vsc";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,12 +42,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between py-8 px-20 bg-gray-800 h-14 text-white font-semibold">
+    <div className="flex items-center justify-between py-8 px-20 bg-gray-800 h-14 text-white font-semibold sticky top-0 z-50">
       {/* Logo Section */}
-      <div className="flex items-center space-x-2">
+      <Link to={"/"} className="flex items-center space-x-1">
         <img src={"/logo.png"} alt="Logo" className="w-8 h-8 bg-transparent" />
         <span>Firstbench</span>
-      </div>
+      </Link>
 
       {/* Navigation Links */}
       <div className="flex space-x-8">

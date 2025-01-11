@@ -9,9 +9,11 @@ const Sidebar = () => {
     <div className="w-1/4 h-[97%] bg-gray-50 rounded-lg shadow-md border border-gray-200 ml-16 my-4">
       <div className="w-full h-full">
         <div className="flex items-center justify-center flex-col">
-          <img src={"/sidebar.png"} alt="Sidebar Logo" className="w-40" />
-          <p className="text-violet-900 text-4xl font-medium">Your Result!</p>
-          <p className="text-gray-400 text-xl font-medium mt-1">
+          <img src={"/sidebar.png"} alt="Sidebar Logo" className="w-64 mt-6" />
+          <p className="text-violet-900 text-5xl font-medium mt-4">
+            Your Result!
+          </p>
+          <p className="text-gray-400 text-xl font-medium mt-4 mb-8">
             All your insights & details in one place
           </p>
         </div>
@@ -65,7 +67,7 @@ const Sidebar = () => {
                   <Link to={"https://github.com/arjit88"}>
                     <p className="text-gray-400">
                       By{" "}
-                      <span className="text-black hover:text-purple-800">
+                      <span className="text-black font-semibold hover:text-purple-800">
                         Arjit Anand
                       </span>
                     </p>
@@ -91,9 +93,9 @@ const Sidebar = () => {
         </div>
 
         {/* Revisit Paper Section */}
-        <div className="flex items-center justify-center mt-3 mb-3">
+        <div className="flex items-center justify-center mt-8 mb-3">
           <div className="rounded-xl shadow-md border border-gray-200 w-[90%] h-56">
-            <p className="text-black font-semibold text-xl mx-3 pt-3">
+            <p className="text-black font-bold text-xl mx-3 pt-3">
               Revisit Paper
             </p>
             <p className="text-gray-400 text-sm mx-3 py-1 w-60">

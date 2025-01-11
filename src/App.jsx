@@ -23,7 +23,7 @@ const App = () => {
           <Sidebar className="w-1/4 bg-gray-800 text-white" />
 
           {/* Content Area */}
-          <div className="flex-1 bg-gray-100">
+          <div className="flex-1">
             {/* Define Routes */}
             <Routes>
               <Route path="/" element={<Hero />} />
