@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BiTimer } from "react-icons/bi";
 import { BsGraphUpArrow } from "react-icons/bs";
-import {
-  FaArrowUpLong,
-  FaCodeCompare,
-  FaCodePullRequest,
-} from "react-icons/fa6";
+import { FaArrowUpLong, FaCodeCompare } from "react-icons/fa6";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
 import { TbSparkles, TbStairsUp } from "react-icons/tb";
@@ -81,10 +77,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 mx-4 my-4">
-      <div className="flex w-full gap-4 relative">
+    <div className="flex flex-col gap-4 mx-1 my-4">
+      <div className="flex flex-col sm:flex-row w-full gap-4 relative">
         {/* First Dropdown */}
-        <div className="rounded-xl shadow-md border border-gray-300 w-[90%] min-h-80 flex relative">
+        <div className="rounded-xl shadow-md border border-gray-300 w-full sm:w-[90%] min-h-80 flex relative">
           <div
             className="w-6 h-6 shadow-md border border-gray-200 my-2 mx-2 flex justify-center items-center rounded-md hover:bg-gray-300 cursor-pointer"
             onClick={() => toggleDropdown("dropdown1")}
@@ -98,7 +94,7 @@ const Hero = () => {
           {dropdownVisible.dropdown1 && (
             <div
               ref={dropdownRefs.dropdown1}
-              className="absolute bg-gray-50 border border-gray-300 shadow-md rounded-md mt-2 w-[90%] z-10 mx-4"
+              className="absolute bg-gray-50 border border-gray-300 shadow-md rounded-md mt-2 w-full sm:w-[90%] z-10 mx-4"
             >
               <ul className="py-2">
                 {options.map((option, index) => (
@@ -116,7 +112,7 @@ const Hero = () => {
         </div>
 
         {/* Second Dropdown */}
-        <div className="rounded-xl shadow-md border border-gray-300 w-[90%] min-h-80 flex relative">
+        <div className="rounded-xl shadow-md border border-gray-300 w-full sm:w-[90%] min-h-80 flex relative">
           <div
             className="w-6 h-6 shadow-md border border-gray-200 my-2 mx-2 flex justify-center items-center rounded-md hover:bg-gray-300 cursor-pointer"
             onClick={() => toggleDropdown("dropdown2")}
@@ -130,7 +126,7 @@ const Hero = () => {
           {dropdownVisible.dropdown2 && (
             <div
               ref={dropdownRefs.dropdown2}
-              className="absolute bg-white border border-gray-300 shadow-md rounded-md mt-2 w-[90%] z-10 mx-4"
+              className="absolute bg-white border border-gray-300 shadow-md rounded-md mt-2 w-full sm:w-[90%] z-10 mx-4"
             >
               <ul className="py-2">
                 {options.map((option, index) => (
@@ -148,7 +144,7 @@ const Hero = () => {
         </div>
 
         {/* Third Dropdown */}
-        <div className="rounded-xl shadow-md border border-gray-300 w-[90%] min-h-80 flex relative">
+        <div className="rounded-xl shadow-md border border-gray-300 w-full sm:w-[90%] min-h-80 flex relative">
           <div
             className="w-6 h-6 shadow-md border border-gray-200 my-2 mx-2 flex justify-center items-center rounded-md hover:bg-gray-300 cursor-pointer"
             onClick={() => toggleDropdown("dropdown3")}
@@ -162,7 +158,7 @@ const Hero = () => {
           {dropdownVisible.dropdown3 && (
             <div
               ref={dropdownRefs.dropdown3}
-              className="absolute bg-white border border-gray-300 shadow-md rounded-md mt-2 w-[90%] z-10 mx-4"
+              className="absolute bg-white border border-gray-300 shadow-md rounded-md mt-2 w-full sm:w-[90%] z-10 mx-4"
             >
               <ul className="py-2">
                 {options.map((option, index) => (
@@ -180,15 +176,14 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex gap-5 mt-3">
-        <div className="flex flex-col rounded-xl shadow-md border border-gray-300 w-[90%] min-h-80">
+      <div className="flex flex-wrap gap-3 mt-3">
+        <div className="flex flex-col rounded-xl shadow-md border border-gray-300 w-full md:w-[45%] lg:w-[24%] min-h-80">
           <div className="flex">
             <div className="w-6 h-6 shadow-md border border-gray-200 my-2 mx-2 flex justify-center items-center rounded-md">
               <BsGraphUpArrow />
             </div>
             <p className="my-2 text-gray-400">Improvements</p>
           </div>
-
           <p className="mx-2 font-semibold text-gray-700">
             Subject Understanding
           </p>
@@ -227,7 +222,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-xl shadow-md border border-gray-300 w-[90%] min-h-80">
+        <div className="flex flex-col rounded-xl shadow-md border border-gray-300 w-full md:w-[45%] lg:w-[24%] min-h-80">
           <div className="flex">
             <div className="w-6 h-6 shadow-md border border-gray-200 my-2 mx-2 flex justify-center items-center rounded-md">
               <BiTimer />
@@ -247,7 +242,7 @@ const Hero = () => {
                 60
                 <span className="text-gray-500 text-2xl font-semibold">%</span>
                 <span className="text-gray-500 text-xl font-semibold">
-                  Ans Took
+                  Ans took
                 </span>
               </p>
 
@@ -265,7 +260,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-xl shadow-md border border-gray-300 w-[90%] min-h-80">
+        <div className="flex flex-col rounded-xl shadow-md border border-gray-300 w-full md:w-[45%] lg:w-[24%] min-h-80">
           <div className="flex">
             <div className="flex w-6 h-6 shadow-md border border-gray-200 my-2 mx-2 justify-center items-center rounded-md">
               <TbStairsUp className="w-full" />
@@ -311,7 +306,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-xl shadow-md border border-gray-300 w-[90%] min-h-80">
+        <div className="flex flex-col rounded-xl shadow-md border border-gray-300 w-full md:w-[45%] lg:w-[24%] min-h-80">
           <div className="flex">
             <div className="w-6 h-6 shadow-md border border-gray-200 my-2 mx-2 flex justify-center items-center rounded-md">
               <TbSparkles />
@@ -359,8 +354,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex gap-4">
-        <div className="flex flex-col px-4 rounded-xl shadow-md border border-gray-300 w-[90%] min-h-80">
+      <div className="flex flex-col sm:flex-row gap-8 ml-1 mt-2">
+        <div className="flex flex-col rounded-xl shadow-md border border-gray-300 w-full sm:w-[48%] min-h-80">
           <div className="flex">
             <div className="w-6 h-6 shadow-md border border-gray-200 my-2 mx-2 flex justify-center items-center rounded-md">
               <FaCodeCompare className="text-gray-700" />
@@ -368,7 +363,7 @@ const Hero = () => {
             <p className="my-2 text-gray-400">Compare Accuracy</p>
           </div>
 
-          <div className="flex justify-center items-center mt-2 mr-2">
+          <div className="flex justify-center items-center mr-2">
             <img
               src={"/graph.png"}
               alt="Graph"
@@ -377,12 +372,12 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-xl shadow-md px-4 border border-gray-300 w-[90%] min-h-80">
+        <div className="flex flex-col rounded-xl shadow-md px-4 border border-gray-300 w-full sm:w-[48%] min-h-80">
           <div className="flex">
-            <div className="w-6 h-6 shadow-md border border-gray-200 my-2 mx-2 flex justify-center items-center rounded-md">
+            <div className="w-6 h-6 shadow-md border border-gray-200 my-2 flex justify-center items-center rounded-md">
               <PiProjectorScreenChartBold className="text-gray-700" />
             </div>
-            <p className="my-2 text-gray-400">Time Taken</p>
+            <p className="my-2 mx-2 text-gray-400">Time Taken</p>
           </div>
 
           <div className="flex flex-col gap-2">

@@ -18,7 +18,7 @@ const Sidebar = () => {
           <p className="text-violet-900 text-2xl lg:text-5xl font-medium mt-2 lg:mt-4">
             Your Result!
           </p>
-          <p className="text-gray-400 text-sm lg:text-xl font-medium mt-2 lg:mt-4 mb-4">
+          <p className="text-gray-400 text-sm lg:text-xl font-medium mt-2 lg:mt-4 mb-4 whitespace-nowrap">
             All your insights & details in one place
           </p>
         </div>
@@ -27,18 +27,18 @@ const Sidebar = () => {
         <div className="flex justify-center mt-2">
           <div className="rounded-xl shadow-md border border-gray-200 w-full lg:w-[90%] p-4">
             <div className="flex items-center border border-gray-200 bg-gray-100 w-full h-auto rounded-md p-3">
-              <div className="w-10 h-10 bg-purple-100 flex items-center justify-center">
+              <div className="w-10 h-10 bg-purple-100 flex items-center rounded justify-center">
                 <BsBagCheck className="text-purple-950" />
               </div>
               <div className="flex flex-col ml-4">
-                <p className="bg-purple-800 text-white px-2 text-xs py-1 font-semibold rounded-full">
+                <p className="bg-purple-800 text-white px-2 text-xs py-1 font-semibold rounded-full whitespace-nowrap">
                   YOU'VE PASSED
                 </p>
                 <p className="text-black text-lg lg:text-2xl font-medium">
                   136 <span className="text-gray-400 text-xs">/240</span>
                 </p>
               </div>
-              <div className="hidden lg:block border-r-2 border-gray-300 h-[60%] mx-4"></div>
+              <div className="border-l-2 border-gray-400 h-10 mx-4"></div>
               <div className="flex items-center flex-col ml-4">
                 <div className="h-6 w-12 bg-green-600 rounded-md flex items-center justify-center">
                   <p className="text-white text-sm font-semibold">76%</p>
@@ -47,8 +47,9 @@ const Sidebar = () => {
               </div>
             </div>
 
-            <div className="flex items-center bg-gray-100 border border-gray-200 rounded-md p-3 mt-4">
-              <div className="flex items-center">
+            <div className="flex flex-col items-start bg-gray-100 border border-gray-200 rounded-md p-3 mt-4">
+              {/* <!-- Left Section --> */}
+              <div className="flex items-center w-full">
                 <img
                   src={"/profile.png"}
                   alt="Profile Logo"
@@ -63,7 +64,12 @@ const Sidebar = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col items-end ml-auto">
+
+              {/* <!-- Horizontal Border --> */}
+              <div className="border-t-2 border-gray-300 w-full my-1"></div>
+
+              {/* <!-- Right Section --> */}
+              <div className="flex gap-12 items-start sm:items-end w-full">
                 <Link to="https://github.com/arjit88">
                   <p className="text-gray-400 text-sm">
                     By{" "}
@@ -72,7 +78,7 @@ const Sidebar = () => {
                     </span>
                   </p>
                 </Link>
-                <p className="bg-green-600 text-white px-2 py-1 text-xs font-semibold rounded-full mt-2">
+                <p className="bg-green-600 text-white px-4 py-1 text-xs font-semibold rounded-full mt-2">
                   92% Accuracy
                 </p>
               </div>

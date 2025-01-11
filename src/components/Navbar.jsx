@@ -14,14 +14,13 @@ const Navbar = () => {
   const [selectedOption, setSelectedOption] = useState("Profile");
   const dropdownRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Dashboard");
   const navigate = useNavigate();
 
   const handleNavigation = (link, path) => {
     setActiveLink(link);
     navigate(path);
-    setMenuOpen(false); // Close menu after navigation
+    setMenuOpen(false);
   };
 
   const handleMenuToggle = () => setMenuOpen(!menuOpen);

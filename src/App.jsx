@@ -18,12 +18,12 @@ const App = () => {
         <Navbar className="w-full" />
 
         {/* Main Content */}
-        <div className="flex flex-1">
+        <div className="flex flex-1 flex-col sm:flex-row">
           {/* Sidebar */}
-          <Sidebar className="w-1/4 bg-gray-800 text-white" />
+          <Sidebar className="w-full sm:w-1/4 bg-gray-800 text-white sm:block hidden" />
 
           {/* Content Area */}
-          <div className="flex-1">
+          <div className="flex-1 overflow-auto">
             {/* Define Routes */}
             <Routes>
               <Route path="/" element={<Hero />} />
