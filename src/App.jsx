@@ -8,7 +8,7 @@ import FirstGuru from "./pages/FirstGuru";
 import TownHall from "./pages/TownHall";
 import AiEvaluation from "./pages/AiEvaluation";
 import MockTest from "./pages/MockTest";
-import Performance from "./pages/pERFORMANCE.JSX";
+import Performance from "./pages/Performance";
 
 const App = () => {
   return (
@@ -32,7 +32,7 @@ const App = () => {
               <Route path="/firstguru" element={<FirstGuru />} />
               <Route path="/townhall" element={<TownHall />} />
               <Route path="/ai-evaluation" element={<AiEvaluation />} />
-              <Route path="/performance" element={<Performance />} />
+              <Route path="/ai-evaluation" element={<Performance />} />
               <Route path="/mock-test" element={<MockTest />} />
             </Routes>
           </div>
