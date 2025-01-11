@@ -70,10 +70,10 @@ const Sidebar = () => {
 
               {/* <!-- Right Section --> */}
               <div className="flex gap-12 items-start sm:items-end w-full">
-                <Link to="https://github.com/arjit88">
+                <Link to="https://github.com/arjit88/firstbench">
                   <p className="text-gray-400 text-sm">
                     By{" "}
-                    <span className="text-black font-semibold hover:text-purple-800">
+                    <span className="text-black font-semibold hover:text-purple-800 hover:underline">
                       Arjit Anand
                     </span>
                   </p>
